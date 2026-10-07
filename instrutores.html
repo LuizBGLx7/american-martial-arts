@@ -1,0 +1,454 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Instrutores | American Martial Arts</title>
+
+    <link rel="icon" type="image/x-icon" href="logo.png" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0b0b0b;
+        font-family: Montserrat, sans-serif;
+        color: #fff;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        padding: 20px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #aa0000;
+        z-index: 999;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .logo span {
+        margin-left: 10px;
+        font-family: Oswald;
+        font-size: 24px;
+        color: #ff1a1a;
+        font-weight: 600;
+      }
+
+      nav a {
+        margin-left: 30px;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #ff1a1a;
+      }
+
+      .hero {
+        margin-top: 90px;
+        height: 55vh;
+        background: url("images/instrutores-banner.jpg") center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.65);
+        top: 0;
+        left: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-family: Oswald;
+        font-size: 70px;
+        color: #fff;
+      }
+
+      .hero span {
+        color: #ff1a1a;
+      }
+
+      section {
+        padding: 100px 8%;
+      }
+
+      .section-title {
+        text-align: center;
+        font-family: Oswald;
+        font-size: 46px;
+        margin-bottom: 60px;
+        color: #ff1a1a;
+      }
+
+      .team {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 35px;
+      }
+
+      .card {
+        background: #141414;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid #222;
+        transition: 0.4s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 35px rgba(255, 26, 26, 0.25);
+      }
+
+      .card img {
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+      }
+
+      .info {
+        padding: 30px;
+      }
+
+      .info h2 {
+        font-family: Oswald;
+        font-size: 32px;
+        color: #ff1a1a;
+        margin-bottom: 8px;
+      }
+
+      .faixa {
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #ddd;
+      }
+
+      .info p {
+        line-height: 1.7;
+        color: #ccc;
+        margin-bottom: 20px;
+      }
+
+      footer {
+        background: #000;
+        padding: 40px;
+        text-align: center;
+        border-top: 2px solid #aa0000;
+        margin-top: 80px;
+      }
+
+      /* Classes de animação consertadas com JS */
+      .animate {
+        opacity: 0;
+        transform: translateY(35px);
+        transition: 0.8s ease-out;
+      }
+
+      .animate.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 48px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo" onclick="location.href='index.html'">
+        <img src="logo.png" alt="Logo" />
+        <span>AMERICAN MARTIAL ARTS</span>
+      </div>
+
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#programas">Programas</a>
+        <a href="index.html#unidades">Unidades</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content animate">
+        <h1>Nossa <span>Equipe</span></h1>
+        <p>
+          Conheça os profissionais responsáveis por transformar vidas através
+          das artes marciais.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title animate">Nossos Instrutores</h2>
+
+      <div class="team">
+
+        <!-- Card 1 -->
+        <div class="card animate">
+          <img alt="Master Jessé Santos" src="jesse.png" />
+
+          <div class="info">
+            <h2>Master J. Santos</h2>
+
+            <div class="faixa">
+              Faixa Preta • 6º Dan
+            </div>
+
+            <p>
+              Com 25 anos de experiência, o Master Jessé Santos ensina arte
+              marcial com propósito, legado e exemplo. Formar uma mente Black
+              Belt vai além da graduação — é disciplina, dedicação e inspiração.
+              Treine até se tornar!
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card animate">
+          <img alt="Sra. Jéssica Santos" src="jessica.jpg" />
+
+          <div class="info">
+            <h2>Sra Jéssica S.</h2>
+
+            <div class="faixa">
+              Faixa Preta • 1º Dan
+            </div>
+
+            <p>
+              Idealizadora de projetos da American Martial Arts e responsável
+              pelas metodologias Lions e Kids. Pedagoga especializada em
+              Neuropsicopedagogia, lidera o time com amor e inspira os
+              instrutores a entregarem sempre o melhor de si.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card animate">
+          <img
+            alt="Professor Jhonatan Pereira"
+            class="pereira-img"
+            src="pereira.jpg"
+          />
+
+          <div class="info">
+            <h2>Sr J. Pereira</h2>
+
+            <div class="faixa">
+              Faixa Preta • 3º Dan
+            </div>
+
+            <p>
+              Conhecido como "Sr. Disciplina", conduz seus alunos com excelência
+              seguindo os ensinamentos do Master Jessé Santos. Apaixonado por
+              fisiculturismo, competições e pelo ensino das crianças, começou
+              como aluno da American e hoje é um dos principais instrutores
+              da equipe.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card animate">
+          <img alt="Maria Eduarda Telli" src="telli.jpg" />
+
+          <div class="info">
+            <h2>Srta Telli</h2>
+
+            <div class="faixa">
+              Faixa Preta • 3º Dan
+            </div>
+
+            <p>
+              Extremamente dedicada e competitiva, conquista alunos e pais pela
+              simpatia e carinho. Valoriza amizades, experiências e o
+              crescimento individual de cada aluno, tornando cada aula única
+              e divertida.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card animate">
+          <img alt="Felipe Schmidt" src="schmidt.jpg" />
+
+          <div class="info">
+            <h2>Sr Schmidt</h2>
+
+            <div class="faixa">
+              Faixa Preta • 2º Dan
+            </div>
+
+            <p>
+              Responsável pela unidade de Tijucas. Instrutor focado no
+              desenvolvimento técnico dos alunos, aplicando disciplina e os
+              valores fundamentais da nossa escola.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card animate">
+          <img alt="Felipe de Lima" src="lima.jpg" />
+
+          <div class="info">
+            <h2>Sr Lima</h2>
+
+            <div class="faixa">
+              Faixa Preta • 1º Dan
+            </div>
+
+            <p>
+              Conhecido como "Sr. Faz Tudo", acompanha seus alunos com atenção à
+              técnica, postura e disciplina. Destaca-se em competições e vive
+              diariamente o propósito de transformar vidas através das artes
+              marciais.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card animate">
+          <img alt="Arthur Bastos" src="bastos.jpg" />
+
+          <div class="info">
+            <h2>Sr Bastos</h2>
+
+            <div class="faixa">
+              Faixa Preta • 1º Dan
+            </div>
+
+            <p>
+              Comprometido com a evolução constante dos alunos, trabalha para
+              desenvolver disciplina, respeito e excelência dentro e fora do
+              tatame.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card animate">
+          <img alt="Ana Cesco" src="CESCO.jpeg" />
+
+          <div class="info">
+            <h2>Srta A. Cesco</h2>
+
+            <div class="faixa">
+              Faixa Preta • 1º Dan
+            </div>
+
+            <p>
+              Instrutora dedicada ao ensino das artes marciais, incentivando
+              seus alunos a evoluírem com confiança, disciplina e espírito de
+              equipe.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card animate">
+          <img alt="Bruna Santos" src="santos.jpeg" />
+
+          <div class="info">
+            <h2>Srta Santos</h2>
+
+            <div class="faixa">
+              Faixa Cinza
+            </div>
+
+            <p>
+              Integrante da equipe American Martial Arts, auxilia no
+              desenvolvimento dos alunos transmitindo dedicação, energia e os
+              valores da academia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="card animate">
+          <img alt="Luiz Bogler" src="BOGLER.jpg" />
+
+          <div class="info">
+            <h2>Sr Bogler</h2>
+
+            <div class="faixa">
+              Faixa Cinza
+            </div>
+
+            <p>
+              Faz parte da equipe de apoio da American Martial Arts,
+              contribuindo para o crescimento dos alunos e fortalecendo a
+              cultura de disciplina, respeito e evolução.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.1
+        }
+      );
+
+      document.querySelectorAll(".animate").forEach((element) => {
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>
+```
